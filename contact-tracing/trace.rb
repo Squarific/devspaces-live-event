@@ -157,6 +157,8 @@ puts File.read(OUTPUT_FILE)
 
 puts "Exposures"
 
+$i = 0
 $exposures_final.each do |exposure|
-    puts "#{exposure[0]},#{exposure[1]},#{exposure[2]}"
+    puts "#{$i},#{exposure[0]},#{exposure[1]}"
+    $i = $i + 1
 end
