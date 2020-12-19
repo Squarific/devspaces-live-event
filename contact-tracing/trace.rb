@@ -157,8 +157,11 @@ puts File.read(OUTPUT_FILE)
 
 puts "Exposures"
 
+$output = ""
 $i = 0
 $exposures_final.each do |exposure|
-    puts "#{$i},#{exposure[0]},#{exposure[1]}"
+    $output = $output + "#{$i},#{exposure[0]},#{exposure[1]}\n"
     $i = $i + 1
 end
+
+File.write("output.csv",$output)
